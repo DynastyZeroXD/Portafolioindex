@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portafolio de Software V </title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f6600;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Assorted_United_States_coins.jpg/800px-Assorted_United_States_coins.jpg'); /* Reemplaza con la URL de la imagen */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: #0f6600;
+            color: #ffffff;
+            padding: 15px 30px;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .logo-btn {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .navbar .logo-btn img {
+            height: 50px;
+            width: auto;
+            transition: transform 0.3s;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        .navbar button {
+            background-color: #00aced;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        /* Estilo para la sección de proyectos */
+        .Proyectos {
+            background-color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Contenedor de cada proyecto */
+        .proyecto-container {
+            margin-bottom: 40px;  
+        }
+
+        /* Estilo de las imágenes de proyectos */
+        .proyecto-img {
+            width: 40%;
+            max-width: 90%;  
+            height: auto;    
+            display: block;
+            margin: 0 auto;  
+            transition: transform 0.3s ease;  
+}
+
+        /* Efecto Hover en la imagen del proyecto */
+        .proyecto-img:hover {
+            transform: scale(1.05);  
+        }
+
+        /* Estilo para las leyendas de los proyectos */
+        .proyecto-leyenda {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+            line-height: 1.5;
+            font-weight: 400;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        
+        .navbar button:hover {
+            background-color: #0f6600;
+        }
+
+        /* Sección principal */
+        .content-wrapper {
+            max-width: 800px;
+            margin: 30px 20px;
+            padding: 20px;
+            text-align: justify;
+        }
+
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            color: #003366;
+            line-height: 1.6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+       /* Contenedor de las tareas con Flexbox */
+        .tareas-container {
+        display: flex;
+        justify-content: space-around; 
+        align-items: center;           
+        gap: 20px;                     
+        flex-wrap: wrap;               
+        margin-top: 20px;              
+        }
+        
+        .separation {
+        height: 50px; /* Ajusta la altura según lo necesario */
+        background-color: transparent;
+        margin: 20px 0; /* Asegura un espaciado fluido */
+        }
+
+
+        /* Estilo para cada imagen de tarea */
+        .tarea-img {
+        height: auto;  
+        transition: transform 0.3s;  
+        }
+
+        /* Tarea más grande */
+        .tarea-grande {
+        width: 150px;  
+        }
+
+        /* Tareas más pequeñas */
+        .tarea-img:not(.tarea-grande) {
+        width: 120px;  
+        }
+
+        /* Efecto Hover en las imágenes */
+        .tarea-img:hover {
+        transform: scale(1.1); 
+        }
+
+        /* Fondos de cada sección */
+        .Sobre_Mi {
+            background-color: #ffffff;
+        }
+
+        .Tareas, .Proyectos {
+            background-color: #ffffff;
+        }
+
+        footer {
+            background-color: #00660c;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            max-width: 1200px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .contacto {
+            color: #00aced;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Estilos del icono de Instagram y Gmail */
+        .social-icons {
+            display: flex;
+            justify-content: center; /* Centrar los iconos */
+            align-items: center; /* Centrar verticalmente */
+            margin-top: 10px; /* Espaciado arriba de los iconos */
+        }
+
+        .gmail-icon, .instagram-icon, .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            margin: 0 10px; /* Espaciado entre iconos */
+            vertical-align: middle;
+        }
+
+        .Yo-img {
+            display: block;
+            margin: 20px auto; /* Centra la imagen y añade margen */
+            max-width: 100%; /* Asegura que la imagen no se desborde */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="Presentación.html" class="logo-btn">
+            <img src="https://utp.ac.pa/sites/default/files/documentos/2024/imagen/3_logo_utp_-_cmyk_oficial.jpg" alt="Logo de la Universidad">
+            <h1>Universidad Tecnológica de Chorrera</h1>
+        </a>
+        <div>
+            <button onclick="location.href='#Sobre_Mi'">Sobre Mí</button>
+            <button onclick="location.href='#Tareas'">Tareas</button>
+            <button onclick="location.href='#Proyectos'">Proyectos</button>
+            <button onclick="location.href='#Contactos'">Contactos</button>
+        </div>
+    </div>
+    
+    <!-- Contenedor principal para centrar el contenido -->
+    <div class="content-wrapper">
+        
+        <!-- Logo de la empresa -->
+        <img src="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/edfd9582886ffca6190b0813ce10cd03cd74d9af/Reynaldo%20Jumpscare.png" alt="Reynaldo Jumpscare" class="Yo-img">
+
+        <div class="separation"></div>
+
+        <section id="Sobre_Mi" class="Sobre_Mi">
+            <h2>Sobre Mí</h2>
+            <p>Mi nombre completo es Reynaldo Javier Murgas Carew, tengo 18 años; nací en Vacamonte, El Tecal.</p> 
+            <p>Estudié en el colegio Centro Bilingüe Vista Alegre.</p>
+            <p>Soy graduado del bachillerato de Tecnología Informática.</p>
+            <p>Y entre mis hobbies está jugar videojuegos, pasar el rato con mis padres, cuidar a mi perro, entretenerme viéndome series, hacer ejercicio de vez en cuando, ayudar en el hogar o en cosas específicas.</p>
+        </section>
+
+        <div class="separation"></div>
+
+    <section id="Tareas" class="Tareas">
+        <h2>Tareas hechas por mi persona</h2>
+    
+        <!-- Contenedor de las tareas con Flexbox -->
+        <div class="tareas-container">
+            <!-- Tarea 1 (más grande) -->
+            <a href="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/6e750d1b51502b321811c6b04bf4589cc3d55b69/Operaci%C3%B3n%20M.P.R.pdf" download="Operación M.P.R. (Desarrollo de Software V).docx">
+                <img src="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/5fd9a63b7b3424de9c30e946096bb41c83716d93/Logo%20de%20Photoshop.jpg" alt="Documento Word" class="tarea-img tarea-grande">
+            </a>
+        
+            <!-- Tarea 2 (más pequeña) -->
+            <a href="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/edfd9582886ffca6190b0813ce10cd03cd74d9af/A2%20Hosting.pdf" download="A2 Hosting">
+                <img src="https://media.licdn.com/dms/image/v2/C560BAQGWL6p1Ro-qVA/company-logo_200_200/company-logo_200_200/0/1630656425870/a2_hosting_logo?e=2147483647&v=beta&t=Jt8pl24FZHxm-Qb6tXFdxObXCi6L9SZDY5fulzfFTDc" alt="A2 Hosting" class="tarea-img">
+            </a>
+        
+            <!-- Tarea 3 (más pequeña) -->
+            <a href="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/edfd9582886ffca6190b0813ce10cd03cd74d9af/Secuestro.vbs">
+                <img src="https://w7.pngwing.com/pngs/67/554/png-transparent-line-point-line-angle-rectangle-windows-thumbnail.png" alt="Secuestro" class="tarea-img">
+            </a>
+
+            <!-- Tarea 4 (más pequeña) -->
+            <a href="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/e812afd9a3d0307f520462854c3fba2073bf07b5/Taller%20de%20Software%20V%20(P%C3%A1ginas%20Webs%20e%20Iconos).pdf" download="Taller de Software V (Páginas Webs e Iconos)">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/234/824/non_2x/pdf-icon-red-and-white-color-for-free-png.png" alt="Secuestro" class="tarea-img">
+            </a>
+
+            <!-- Tarea 5 (más pequeña) -->
+            <a href="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/b69f0745e58e9c33b129fe46da7a53ed44cd58aa/Logo%20.ai">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQgRuuB4p3GAc2Z9_zO7mEw7Ko_j6xaPqBxA&s" alt="Secuestro" class="tarea-img">
+            </a>
+
+            <!-- Tarea 6 (más pequeña) -->
+            <a href="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/b69f0745e58e9c33b129fe46da7a53ed44cd58aa/Flyer.jpeg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/640px-Adobe_Photoshop_CC_icon.svg.png" alt="Secuestro" class="tarea-img">
+            </a>
+
+            <!-- Tarea 7 (más pequeña) -->
+            <a href="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/b69f0745e58e9c33b129fe46da7a53ed44cd58aa/Elementos%20Multimedia.pdf" download="Elementos Multimedia">
+                <img src="https://informaticaymultimedia.wordpress.com/wp-content/uploads/2012/05/multimedia2.jpg?w=640" alt="Secuestro" class="tarea-img">
+            </a>
+
+            <!-- Tarea 8 (más pequeña) -->
+            <a href="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/b69f0745e58e9c33b129fe46da7a53ed44cd58aa/Cu%C3%B1a%20Publicitaria.mp4" download="Cuña Publicitaria">
+                <img src="https://audiomarketing.com.mx/imagenes/cuna-publicitarias.jpg" alt="Secuestro" class="tarea-img">
+            </a>
+        </div>
+
+    <!-- Descripción de las tareas -->
+    <p>Estas fueron unas de las tareas que se pidieron:</p>
+    <li>El desarrollo de un empresa ficticia con su respectiva página web, lo cual es algo sencillo y dinamica.</li>
+    <li>Un sitio de hosting que nos ayuda a recopilar información con el factor de que esto estará divido en grupos de diferentes encargados</li>
+    <li>Un código bastante inofensivo que desarrollamos en clase, que; su función sería repetir el mismo proceso una vez salir o acepatdo en el botón correspondiente. </li>
+    <li>Taller de Páginas Web e Iconos que era de investigar unos íconos que son utilizados en celulares, computadoras, incluso hasta en algunos sistemas como lo podría ser una calculadora o un despertador. Y algunas páginas web que tendríamos que ponerle qué es lo que hacían, sus colores, por qué los representaban, y más.</li>
+    <li>Un logo hecho en Adobe Illustrator para mi empresa ficticia de robótica.</li>
+    <li>Un flyer de contratación de nuevo personal para la empresa ficticia que estuvimos creando de robótica sobre piezas de los mismos.</li>
+    <li>Un organizador gráfico sobre los elementos multimedias que existen.</li>
+    <li>Una cuña publicitaria para patrocinar mi empresa y ficticia sobre piezas robóticas para conseguir nuevo personal.</li>
+    </section>
+
+    <div class="separation"></div>
+
+        <section id="Proyectos" class="Proyectos">
+            <h2>Proyectos</h2>
+            <div class="proyecto-container">
+                <a href="https://proyecto-ds-5.vercel.app/" class="proyecto-link">
+                    <img src="D:\Portafolio de Software V\Js.Electronics.png" alt="Proyecto DS 5" class="proyecto-img">
+                </a>
+                <p class="proyecto-leyenda">Este es el Proyecto DS 5, desarrollado utilizando tecnologías de vanguardia.</p>
+            </div>
+        
+            <!-- Segundo proyecto -->
+            <div class="proyecto-container">
+                <a href="D:\Portafolio de Software V\Proyecto Landing Page\Landing page\menu.html" class="proyecto-link">
+                    <img src="https://raw.githubusercontent.com/DynastyZeroXD/reynaldo.github.io/5fd9a63b7b3424de9c30e946096bb41c83716d93/Logo%20de%20Photoshop.jpg" alt="Landing Page" class="proyecto-img">
+                </a>
+                <p class="proyecto-leyenda">Landing Page desarrollada con HTML, CSS y JavaScript, diseñada para una experiencia de usuario fluida.</p>
+            </div>
+        </section>
+
+    <!-- Pie de página -->
+    <footer id="Contactos">
+        <p>Mis Sitios más utilizados serían los siguientes</p>
+        <p class="Contactos">Contactos:</p>
+        <div class="social-icons">
+            <a href="mailto:reymurgas01@gmail.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/1280px-Gmail_icon_%282020%29.svg.png" alt="Gmail" class="gmail-icon">
+            </a>
+            <a href="https://www.instagram.com/itz_kingmurgas16/profilecard/?igsh=MW1oeWs0NmtsMTEwMQ==" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="instagram-icon">
+            </a>
+            <a href="https://wa.me/qr/6J63SRBAIBOWK1" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png" alt="WhatsApp" class="whatsapp-icon">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
